@@ -24,7 +24,7 @@ int cgame_initialize()
 		return 0;
 	}
 	srand(time(NULL));
-	intialized = 1;
+	initialized = 1;
 	return 1;
 }
 
