@@ -14,10 +14,10 @@
 
 int initialized = 0;
 
-int initialize();
-int randInt(int min, int max);
+int cgame_initialize();
+int cgame_randInt(int min, int max);
 
-int initialize()
+int cgame_initialize()
 {
 	if (initialized == 1)
 	{
@@ -28,7 +28,7 @@ int initialize()
 	return 1;
 }
 
-int randInt(int min, int max)
+int cgame_randInt(int min, int max)
 {
 	// Todo: find a better way of generating random numbers.
 	int theNumber = (rand() % (max - min + 1)) + min;
