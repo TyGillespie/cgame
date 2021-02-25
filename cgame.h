@@ -30,9 +30,8 @@ int cgame_initialize()
 
 int cgame_randInt(int min, int max)
 {
-	// Todo: find a better way of generating random numbers.
 	int theNumber = (rand() % (max - min + 1)) + min;
 	return theNumber;
 }
 
-#endif
+#endif // CGAME_H

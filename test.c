@@ -12,7 +12,10 @@
 int main()
 {
 	cgame_initialize();
-	int rng = cgame_randInt(1, 10);
-	printf("The number is: %d", rng);
+	for (int i = 0; i < 10; i++)
+	{
+		int rng = cgame_randInt(1, 10);
+		printf("%d\n", rng);
+	}
 	return 0;
 }
