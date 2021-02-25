@@ -11,6 +11,7 @@
 
 #include<stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 int initialized = 0;
 
@@ -19,6 +20,8 @@ int cgame_randInt(int min, int max);
 double cgame_areaOfSquare(double sideLength);
 double cgame_areaOfRectangle(double length, double width);
 double cgame_areaOfTriangle(double length, double width);
+int cgame_beepTone(int frequency, int length);
+int cgame_wait(int ms);
 
 int cgame_initialize()
 {
@@ -53,6 +56,20 @@ double cgame_areaOfTriangle(double length, double width)
 {
 	// We simply use the area formula (length * width) here, but divide it by two because the shape we're dealing with is a triangle.
 	return (length * width) / 2;
+}
+
+int cgame_beepTone(int frequency, int length)
+{
+	Beep(frequency, length);
+	// Return after the beep has finished, allowing for thinss to be queued.
+	return 1;
+}
+
+int cgame_wait(int ms)
+{
+	Sleep(ms);
+	// Return after the beep has finished, allowing for things to be queued.
+	return 1;
 }
 
 #endif // CGAME_H
